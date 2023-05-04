@@ -1,0 +1,32 @@
+Task2 : 
+1.  Before malloc - 16384 
+    After  malloc - 81920
+
+2.  The memory size doesn't change. 
+
+3.  The size of the memory doesn't change after calling free() because the free() function releases the pointer and not the memory itself. 
+    The size of the memory increases more than 20000 after malloc() because the memory is calculated in chunks of 4096 byte ( in the morecore()) and the size of the Header is 16 bytes. 
+    In the malloc() function, the memory is calculated 16384 + 4096 * 16 = 81920 .
+
+Task 3 : 
+1. 
+     
+Task 4: 
+1. The scheduler is implemented in proc.c ' function name " scheduler()"
+
+2. The scheduler scan the processes array for the first process in the array to the last. For each process, if it is RUNNABLE, the scheduler choses this process and runs it. 
+
+3. When creating a new process in fork, after creating the process and copying the data. fork adds the process to the proccesses array and set the process to RUNNABLE.
+
+4. The process is set to sleeping mode,,thus the scheduler won't run it. 
+
+Task 6: 
+1. No they are differrent. run time is the time that the process spends on executing its task, while sleep time is the time a process is waiting for event and not running. 
+
+2. No , runnable is the time a process spending on waiting in the queue of processes to get a cpu time to run its tasks. 
+
+3. Yes. the run time of them of all of them is the same, while the runnable and sleeping times are larger when the priority is low. 
+
+4. Yes, when we give high priority to a process it waits less time. 
+
+5. Its problematic because this scheduling can cause starvation to low priority processes. 
