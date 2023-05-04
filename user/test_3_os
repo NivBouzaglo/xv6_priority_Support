@@ -1,0 +1,14 @@
+1.We need to change the signature all over the OS ,and give him a property input, for the OS work well.
+
+2.we can give bigger size to the buffer or we can check that the msg stop the take the chars after the 32 char.
+
+3.we put a garbege data in the missing cells.
+
+4.twice , one in the exit and one in the wait, from the child to the parent.
+
+5.The child run the exit and copy the massage to the parent now he return the the sh.c,
+  and wait until the child over and before the wait we put the adress and copy the massege to this adress,
+  wait get the msg from the child to the adress that he put in the copyout.
+
+6.She will print it the the screen later
+
